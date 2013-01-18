@@ -274,7 +274,7 @@ ngx_http_statsd_handler(ngx_http_request_t *r)
 
 		stat = stats[c];
 		s = ngx_http_statsd_key_get_value(r, stat.ckey, stat.key);
-		ngx_escape_statsd_key(s.data, s.data, s.len);
+		//ngx_escape_statsd_key(s.data, s.data, s.len);
 
 		n = ngx_http_statsd_metric_get_value(r, stat.cmetric, stat.metric);
 		b = ngx_http_statsd_valid_get_value(r, stat.cvalid, stat.valid);
